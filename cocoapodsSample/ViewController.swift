@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
@@ -15,6 +16,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func Show(_ sender: Any) {
+        print(1)
+        SVProgressHUD.show(withStatus: "ロード中")
+    }
+    
+    
+    @IBAction func Cancel(_ sender: Any) {
+        SVProgressHUD.dismiss()
+    }
+    
 }
 
